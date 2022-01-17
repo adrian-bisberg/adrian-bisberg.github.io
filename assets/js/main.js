@@ -62,7 +62,6 @@
    */
   on('click', '#navbar .nav-link', function(e) {
     var portrait = document.getElementById("portrait");
-    var leading = document.getElementById("leading_col");
 
     let section = select(this.hash)
 
@@ -92,16 +91,14 @@
           item.classList.remove('section-show')
         })
         portrait.style.display = "block"
-        leading.style.display = "block"
-        document.getElementById("image_col").style.display = "block"
+
         return;
       }
 
       if (!header.classList.contains('header-top')) {
         header.classList.add('header-top')
         portrait.style.display = "none"
-        leading.style.display = "none"
-        document.getElementById("image_col").style.display = "none"
+
         setTimeout(function() {
           sections.forEach((item) => {
             item.classList.remove('section-show')
